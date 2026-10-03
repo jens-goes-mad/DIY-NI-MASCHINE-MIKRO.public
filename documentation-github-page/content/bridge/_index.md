@@ -18,10 +18,20 @@ toc: true
 
 ## Idea
 
-```
- Maschine Mikro MK3 ──USB (NI protocol)──▶ [ Bridge ] ──USB-MIDI (class compliant)──▶ Computer / DAW
-                                              │
-                                              └──DIN MIDI──▶ Hardware synths
+```text {linenos=false}
+  Maschine Mikro MK3
+          │
+          │ USB (NI protocol)
+          ▼
+     ┌──────────┐
+     │  Bridge  │
+     └──────────┘
+       │      │
+       │      └── DIN MIDI ──▶ hardware synths
+       │
+       │ USB-MIDI (class compliant)
+       ▼
+  Computer / DAW
 ```
 
 The bridge is the only component that talks to the Mikro directly. Everything else sees a
