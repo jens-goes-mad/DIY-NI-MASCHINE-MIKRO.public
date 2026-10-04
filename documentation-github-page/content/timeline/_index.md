@@ -53,6 +53,32 @@ including unplug and replug. See [Bridge](/bridge)."
     body: "
 The 128 x 32 display can be drawn pixel by pixel. With that, every control,
 every light and the screen are mapped. See [Protocol](/protocol)."
+  - label: "2026-10-04"
+    title: "LED effects and the metronome"
+    weight: 70
+    body: "
+Blinking keys and a metronome pendulum on the 25 LEDs above the touch strip,
+following an internal 120 BPM tempo."
+  - label: "2026-10-04"
+    title: "The device becomes a state machine"
+    weight: 80
+    body: "
+Running mode with the tempo on the display, TAP and TEMPO, a dim glow on every
+key for dark stages -- described as one table that also writes its own
+documentation. See [Usage](/usage)."
+  - label: "2026-10-04"
+    title: "External beat"
+    weight: 90
+    body: "
+The device follows an incoming MIDI clock and falls back to its own tempo when
+the clock stops. Measuring over a whole beat keeps the shown tempo steady even
+when the clock arrives with timing wobbles."
+  - label: "2026-10-04"
+    title: "The menu"
+    weight: 100
+    body: "
+A menu on the device itself: choose the metronome colour on the pads, and the
+full light-and-display TEST. See [Usage](/usage)."
 ---
 # Timeline
 

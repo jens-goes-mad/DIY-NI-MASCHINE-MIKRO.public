@@ -47,10 +47,15 @@ hardware synths too.
   on a computer before they go into firmware.
 - A **cross-platform desktop editor** mirrors the surface on screen and configures the
   bridge through documented MIDI/SysEx.
-- First step done: a small **desktop host program** (macOS for now) that waits for the
-  Mikro, lights every LED the moment it is plugged in, prints everything it reports,
-  and copes with unplugging and replugging. For now it handles exactly one Mikro at a
-  time.
+- Running today: a **desktop host program** (macOS for now) that drives the Mikro with
+  the full device behaviour -- running mode, tempo (internal, tap, external MIDI clock),
+  metronome on the strip LEDs, and the menu (see [Usage](/usage)). It copes with
+  unplugging and replugging and handles exactly one Mikro at a time.
+- The behaviour is one **state machine** described in a table; its documentation is
+  generated from that same table, so it cannot drift from what the device does.
+- The **external beat** arrives as MIDI clock over the same message link the bridge
+  will use (serial or, on the desktop, TCP). The tempo is measured over a whole beat,
+  so small timing wobbles on the link don't make the display flicker.
 
 ## Hardware (open)
 

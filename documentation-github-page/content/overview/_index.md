@@ -51,6 +51,7 @@ thus: [jens-goes-mad](/me).
 
 ## Where to look next
 
+- [Usage](/usage) -- what the device does and what the keys do, the menu.
 - [Protocol](/protocol) -- what the Mikro MK3 sends and accepts over USB, at a glance.
 - [Bridge](/bridge) -- the planned bridge hardware and software.
 - [Timeline](/timeline) -- the build log.
