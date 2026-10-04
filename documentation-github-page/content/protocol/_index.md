@@ -53,7 +53,8 @@ pressure is reported many times per second -- enough for polyphonic aftertouch.
 | 16 RGB pads | a colour palette of **16 hues plus white**, each at **4 brightness levels** |
 | 25 touch strip LEDs | the same palette as the pads |
 
-The **display** is next on the list and not mapped yet.
+And the **display**: 128 x 32 pixels, monochrome, written in two halves. Out of the
+box it shows "MASCHINE MIKRO" until the first picture arrives.
 
 ## How it was verified
 

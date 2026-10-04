@@ -47,6 +47,10 @@ hardware synths too.
   on a computer before they go into firmware.
 - A **cross-platform desktop editor** mirrors the surface on screen and configures the
   bridge through documented MIDI/SysEx.
+- First step done: a small **desktop host program** (macOS for now) that waits for the
+  Mikro, lights every LED the moment it is plugged in, prints everything it reports,
+  and copes with unplugging and replugging. For now it handles exactly one Mikro at a
+  time.
 
 ## Hardware (open)
 

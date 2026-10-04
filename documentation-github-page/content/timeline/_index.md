@@ -40,6 +40,19 @@ A portable C++ decoder is tested against the real recordings. See
 All 80 lights: button brightness, and a 16-hue + white palette with 4
 brightness levels for the pads and the touch strip LEDs. Confirmed again after a
 cold start without any NI software."
+  - label: "2026-10-03"
+    title: "First host program"
+    weight: 50
+    body: "
+A desktop program now detects the Mikro when it is plugged in, lights all LEDs
+as a visible signal, shows every event, and turns the lights off on exit --
+including unplug and replug. See [Bridge](/bridge)."
+  - label: "2026-10-03"
+    title: "Display mapped"
+    weight: 60
+    body: "
+The 128 x 32 display can be drawn pixel by pixel. With that, every control,
+every light and the screen are mapped. See [Protocol](/protocol)."
 ---
 # Timeline
 
