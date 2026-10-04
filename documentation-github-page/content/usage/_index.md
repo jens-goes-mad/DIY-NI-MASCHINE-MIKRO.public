@@ -94,6 +94,8 @@ of the incoming clock.
 Choose the colour of the metronome pendulum.
 
 - The **pads show 16 colours**; the current one **blinks**.
+- All buttons go **dark** so the colours stand out -- except MENU (lit) and Star and
+  Search (dim): they sit next to the encoder and keep it findable in the dark.
 - **Press a pad** to choose its colour -- the pendulum takes it at once, and the new
   colour now blinks. Try as many as you like.
 - **Push the encoder** or press **MENU** to go back to the list.
