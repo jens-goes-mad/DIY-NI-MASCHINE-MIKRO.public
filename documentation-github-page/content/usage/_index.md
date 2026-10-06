@@ -30,8 +30,9 @@ machine -- this page is its human-readable version.
  ┌─────────┐ MENU  ┌──────┐ push  ┌───────────┐
  │ RUNNING │ ────▶ │ MENU │ ────▶ │ METRONOME │
  │         │ ◀──── │ list │ ────▶ │ SCENE ──▶ COLOR, CC
- └─────────┘ MENU  │      │ ────▶ │ TEST (3 s)│
-    │   ▲          └──────┘ ◀──── └───────────┘
+ └─────────┘ MENU  │      │ ────▶ │ GLOBAL MIDI ──▶ MIDI-IN, MIDI-OUT
+    │   ▲          │      │ ────▶ │ TEST (3 s)│
+    │   │          └──────┘ ◀──── └───────────┘
     │   │                   MENU (one level up)
     ▼   │ same key or MENU
  ┌─────────────────────┐
@@ -167,6 +168,32 @@ From step 3 on, the buttons go dark except MENU, Star and Search (and ERASE in s
 like in METRONOME.
 **MENU** goes one level up at every step. For now, changes last until the program is
 closed; saving comes with the bridge box.
+
+### GLOBAL MIDI
+
+Which MIDI channels the device uses, for everything that has no channel of its own.
+
+1. Choose **MIDI-IN** or **MIDI-OUT** with the encoder and push it.
+2. The display shows all 16 channels in two rows:
+
+   ```text {linenos=false}
+   << MIDI-OUT
+   01 02 03 04 05 06 07 08
+   09 10 11 12 13 14 15 16
+   ```
+
+   A channel that is **on** shows inverted (a light box with a dark number). A small
+   **bar** below a number marks where you are.
+3. Turn the encoder or press **Left / Right** to move (it wraps around from 16 to 01),
+   **push the encoder** to switch that channel on or off. Any number of channels can be
+   on.
+
+- **MIDI-IN:** the channels the device listens to. At the start all 16 are on.
+- **MIDI-OUT:** the channels a pad without its own channel sends on -- on every
+  channel that is on. At the start only channel 1.
+
+**For now these settings are only stored and shown** -- the device does not use them
+yet. Sending and receiving on them comes next.
 
 ### TEST
 
