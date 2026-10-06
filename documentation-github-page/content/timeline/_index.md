@@ -79,6 +79,21 @@ when the clock arrives with timing wobbles."
     body: "
 A menu on the device itself: choose the metronome colour on the pads, and the
 full light-and-display TEST. See [Usage](/usage)."
+  - label: "2026-10-05"
+    title: "Scenes on the device"
+    weight: 110
+    body: "
+Ten scenes to choose from right on the Mikro, each playing at once; new scenes are
+created on the spot (USER-1 to USER-7), and every pad gets its colour from the
+16-colour palette -- or is erased. See [Usage](/usage)."
+  - label: "2026-10-06"
+    title: "Stage controls"
+    weight: 120
+    body: "
+Calmer and quicker on stage: the menu shows how deep you are, colour choosing
+no longer flashes, Star sets the pad brightness, the encoder sets the tempo,
+PLAY / STOP start and stop it, and Scene switches scenes without the menu. See
+[Usage](/usage)."
 ---
 # Timeline
 

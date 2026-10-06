@@ -17,7 +17,7 @@ toc: true
 How the Mikro behaves with the DIY software: what it shows, what the keys do, and
 how to find your way through the menu. This page grows with every new feature.
 
-**Status (2026-10-04):** everything below runs today with the desktop host program;
+**Status (2026-10-06):** everything below runs today with the desktop host program;
 the bridge box will run the very same behaviour. Behind the scenes it is one state
 machine -- this page is its human-readable version.
 
@@ -31,8 +31,14 @@ machine -- this page is its human-readable version.
  │ RUNNING │ ────▶ │ MENU │ ────▶ │ METRONOME │
  │         │ ◀──── │ list │ ────▶ │ SCENE ──▶ COLOR, CC
  └─────────┘ MENU  │      │ ────▶ │ TEST (3 s)│
-                   └──────┘ ◀──── └───────────┘
-                            MENU (one level up)
+    │   ▲          └──────┘ ◀──── └───────────┘
+    │   │                   MENU (one level up)
+    ▼   │ same key or MENU
+ ┌─────────────────────┐
+ │ quick keys          │
+ │ Star : brightness   │
+ │ Scene: scene select │
+ └─────────────────────┘
 ```
 
 There is no start-up animation: the Mikro already runs its own self-test when it gets

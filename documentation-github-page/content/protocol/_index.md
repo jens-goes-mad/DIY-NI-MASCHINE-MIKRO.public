@@ -50,7 +50,7 @@ pressure is reported many times per second -- enough for polyphonic aftertouch.
 | Lights | Control |
 |---|---|
 | 39 button LEDs | brightness; each button has its own fixed colour |
-| 16 RGB pads | a colour palette of **16 hues plus white**, each at **4 brightness levels** |
+| 16 RGB pads | a colour palette of **16 hues plus white**, each at **4 brightness levels** (the lowest two look almost the same) |
 | 25 touch strip LEDs | the same palette as the pads |
 
 And the **display**: 128 x 32 pixels, monochrome, written in two halves. Out of the
