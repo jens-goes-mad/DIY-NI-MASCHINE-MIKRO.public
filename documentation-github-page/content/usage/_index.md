@@ -166,8 +166,8 @@ Set up your scenes right on the device -- for now their **pad colours**.
 
 From step 3 on, the buttons go dark except MENU, Star and Search (and ERASE in step 5),
 like in METRONOME.
-**MENU** goes one level up at every step. For now, changes last until the program is
-closed; saving comes with the bridge box.
+**MENU** goes one level up at every step. Your scenes are kept -- see
+[What the device remembers](#what-the-device-remembers).
 
 ### GLOBAL MIDI
 
@@ -192,7 +192,7 @@ Which MIDI channels the device uses, for everything that has no channel of its o
 - **MIDI-OUT:** the channels a pad without its own channel sends on -- on every
   channel that is on. At the start only channel 1.
 
-**For now these settings are only stored and shown** -- the device does not use them
+**For now these settings are only kept and shown** -- the device does not use them
 yet. Sending and receiving on them comes next.
 
 ### TEST
@@ -200,6 +200,17 @@ yet. Sending and receiving on them comes next.
 Lights **every LED** and shows a **test picture** on the display for 3 seconds, then
 returns to the list by itself (MENU ends it earlier). Use it to check that all lights
 and the display work.
+
+## What the device remembers
+
+Everything you set on the device is kept when you switch it off: the scenes and their
+pad colours, the metronome colour, the pad brightness, the tempo (internal or
+external, and the internal BPM), the MIDI channels -- and which scene was playing, so
+it starts with that one again. It is saved a moment (2 seconds) after you change
+something, so turning the encoder through many values saves only once.
+
+With the desktop program the settings live in a `config` folder next to the program;
+the bridge box will keep them in its own memory.
 
 ## Coming next
 
