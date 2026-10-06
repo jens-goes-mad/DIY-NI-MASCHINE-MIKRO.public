@@ -84,7 +84,17 @@ current **scene** (your sounds and MIDI assignments).
 | **Encoder, Left / Right** | With the internal tempo `(I)`: the tempo, 1 BPM per step (30 to 300). No push needed -- the display and the pendulum follow at once. With the external tempo `(E)` they do nothing: the tempo comes from outside. |
 | **STOP** | With the internal tempo `(I)`: stops it -- the pendulum goes off (and later no clock is sent out). The tempo stays on the display. |
 | **PLAY** | With the internal tempo `(I)`: starts it again from beat 0. With the external tempo `(E)`, PLAY and STOP do nothing -- the clock comes from outside, and its pendulum runs even if you stopped the internal one. |
+| **Encoder push** | Double or half time -- see below. |
 | **Scene** | Choose the playing scene -- see below. |
+
+**Double and half time (encoder push):** a slow beat is hard to follow with the eyes,
+a fast one flickers. Below 80 BPM, **push the encoder**: the pendulum and the TEMPO
+light move twice per beat, and the small row above the tempo shows `DOUBLE TIME`.
+While a push would switch (below 80 or above 160 BPM), that row shows a small `O` as a
+hint; between 80 and 160 it stays empty.
+Above 160 BPM a push gives `HALF TIME`: one swing every two beats. Push again for
+normal. The tempo itself does not change -- only how the beat is shown -- and it goes
+back to normal by itself once the tempo is between 80 and 160 again.
 
 **Choosing a scene (Scene):** a quick key, not a menu. Press **Scene**: it blinks,
 and the display shows `SCENE 01/10` and the scene's name (or `EMPTY`). Turn the
