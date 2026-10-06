@@ -59,7 +59,10 @@ current **scene** (your sounds and MIDI assignments).
 
 **The lights:**
 
-- **MENU, TAP, Star, Scene, TEMPO** are lit.
+- **MENU, TAP, Star, Scene** are lit.
+- **TEMPO blinks with the beat**, in step with the pendulum: it lights up when the
+  pendulum turns at an end and goes dim halfway through the beat. While the internal
+  tempo is stopped it is steadily lit.
 - **Left / Right** are lit while the internal tempo `(I)` is in use -- then they change
   the tempo (see below). With the external tempo `(E)` they glow dimly and do nothing.
 - **STOP / PLAY** with the internal tempo `(I)`: STOP is lit while the tempo plays,
