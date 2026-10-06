@@ -40,8 +40,8 @@ power. The full light-and-display test is in the menu (TEST).
 
 ## Running mode
 
-This is where you play. The pads, the encoder, the touch strip and almost all buttons
-belong to the current **scene** (your sounds and MIDI assignments).
+This is where you play. The pads, the touch strip and most buttons belong to the
+current **scene** (your sounds and MIDI assignments).
 
 **The display** shows the tempo:
 
@@ -52,11 +52,14 @@ belong to the current **scene** (your sounds and MIDI assignments).
 
 **The lights:**
 
-- **MENU, TAP, Left, Right, Scene** are lit.
-- **TEMPO** is **steadily lit** while the external tempo is in use and **blinks with
-  the beat** while the internal tempo is in use.
+- **MENU, TAP, Star, Scene, TEMPO** are lit.
+- **Left / Right** are lit while the internal tempo `(I)` is in use -- then they change
+  the tempo (see below). With the external tempo `(E)` they glow dimly and do nothing.
+- **STOP / PLAY** with the internal tempo `(I)`: STOP is lit while the tempo plays,
+  PLAY while it is stopped -- the other one glows dimly. With the external tempo `(E)`
+  both are off.
 - The **LEDs above the touch strip** show a metronome pendulum: one sweep per beat,
-  slowing down at the ends like a real mechanical metronome.
+  slowing down at the ends like a real mechanical metronome -- while the tempo runs.
 - Every other button glows **very dimly**, so you can still find your way on a dark
   stage.
 
@@ -67,6 +70,26 @@ belong to the current **scene** (your sounds and MIDI assignments).
 | **TAP** | Tap the tempo. From the 4th tap on, the tapped tempo becomes the internal tempo, and the device switches to it. A pause of more than 2 seconds starts a new measurement. |
 | **TEMPO** | Choose the tempo source: **internal** or **external**. With "external", the device follows an incoming MIDI clock; if the clock stops for more than a second, it falls back to the internal tempo on its own -- and picks the clock up again when it returns. |
 | **MENU** | Open the menu. Notes you are still holding are ended first, so nothing hangs. |
+| **Star** | Pad brightness -- see below. |
+| **Encoder, Left / Right** | With the internal tempo `(I)`: the tempo, 1 BPM per step (30 to 300). No push needed -- the display and the pendulum follow at once. With the external tempo `(E)` they do nothing: the tempo comes from outside. |
+| **STOP** | With the internal tempo `(I)`: stops it -- the pendulum goes off (and later no clock is sent out). The tempo stays on the display. |
+| **PLAY** | With the internal tempo `(I)`: starts it again from beat 0. With the external tempo `(E)`, PLAY and STOP do nothing -- the clock comes from outside, and its pendulum runs even if you stopped the internal one. |
+| **Scene** | Choose the playing scene -- see below. |
+
+**Choosing a scene (Scene):** a quick key, not a menu. Press **Scene**: it blinks,
+and the display shows `SCENE 01/10` and the scene's name (or `EMPTY`). Turn the
+encoder or press **Left / Right** -- the chosen scene **plays at once**, and the pads
+show its colours. An empty slot shows dark pads and the playing scene stays. Pads and
+the touch strip keep playing. **Scene**, **MENU** or **Star** takes you back.
+
+**Pad brightness (Star):** a quick key for the stage, not a menu. Press **Star**: the
+top row shows `BRIGHTNESS`, the bottom row the level: `LEVEL 1/3` (dim, the start
+value), `LEVEL 2/3` or `LEVEL 3/3` (brightest). Turn the encoder or press **Left /
+Right** to make all pads at rest dimmer or brighter -- you see it at once. (The pads
+know one more step, but it looks almost the same as the dimmest, so it is left out.) A pad you hit always lights at full brightness, so it stands out. At
+`LEVEL 3/3` the pads already rest at full brightness, so a pad you hit lights **white**
+instead. The pads and the touch strip keep playing meanwhile. **Star** (or MENU) again,
+and you are back.
 
 **About the external tempo:** when a MIDI clock starts, the device measures half a
 beat before it switches to `(E)`, so the first number you see is already right. The
@@ -87,6 +110,20 @@ of the incoming clock.
   running mode.
 - While the menu is open, nothing reaches your music: pads and buttons are silent.
 
+**Where am I?** Below the list, the top row starts with one `<` per level -- that's
+how many MENU presses take you back to the list -- followed by what you chose one level
+up, and, where you choose from a list, your position in it:
+
+| Top row | Where |
+|---|---|
+| `MENU 02/03` | the menu list |
+| `< SCENE 04/10` | SCENE: the scene list |
+| `<< USER-1 01/02` | inside scene USER-1: its settings |
+| `<<< COLOR` | COLOR: pick a pad |
+| `<<<< PAD 10` | pad 10 (the number printed on it): pick a colour |
+
+A long scene name is shortened so the row fits.
+
 ### METRONOME
 
 Choose the colour of the metronome pendulum.
@@ -103,17 +140,20 @@ Choose the colour of the metronome pendulum.
 Set up your scenes right on the device -- for now their **pad colours**.
 
 1. **Choose a scene** (1 to 10) with Left / Right or the encoder. The top row shows
-   `SCENE 01/10`, the bottom row its name -- or `EMPTY`. The chosen scene **plays at
+   `< SCENE 01/10`, the bottom row its name -- or `EMPTY`. The chosen scene **plays at
    once** and the pads show its colours, so what you edit is what you play.
 2. **Push the encoder** to open it. An empty slot becomes a new, blank scene: all pads
    dark, playing notes 36 to 51. Scenes 4 to 10 get the names **USER-1** to **USER-7**
    (names can't be typed on the device).
 3. Choose **COLOR** (or **CC** -- listed, but coming later) with the encoder and push it.
-4. **Pick a pad:** all pads blink softly in their colours (pads without a colour blink
-   white). Press the pad you want to colour.
-5. **Pick a colour:** that pad keeps blinking brightly, the other 15 pads show the
-   colours. Press one -- the pad takes it (dim at rest, bright while you hit it), and
-   you are back at step 4 for the next pad. Pressing the blinking pad keeps its colour.
+4. **Pick a pad:** nothing blinks on and off. The pads glow softly, switching between
+   their colour and white; pads without a colour stay white. Press the pad you want to
+   colour.
+5. **Pick a colour:** all 16 pads show the 16 colours. The pad you are colouring is
+   brighter and switches between the colour at its place and its current colour -- or
+   white, when it has none yet or the two are the same. Press any pad, that one
+   included -- your pad takes its colour (dim at rest, bright while you hit it), and you
+   are back at step 4 for the next pad.
    **ERASE** is lit while the pad has a colour: press it to switch the pad off (no
    colour), and you are back at step 4. On a pad without a colour, ERASE stays dark.
 
